@@ -1,0 +1,11 @@
+{
+  "name": "working-with-talk",
+  "version": "0.0.0",
+  "dependencies": {
+    "bootstrap": "2.3.2",
+    "reveal.js": "2.5.0"
+  },
+  "devDependencies": {
+    "angular": "~1.0.8"
+  }
+}
