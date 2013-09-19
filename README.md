@@ -1,4 +1,4 @@
-# Say Hello to OpenLayers 3
+# Working with OpenLayers 3
 
 ## Set up
 
