@@ -42,8 +42,8 @@ var vector = new ol.layer.Vector({
         new ol.style.Shape({
           type: ol.style.ShapeType.CIRCLE,
           size: ol.expr.parse('size'),
-          stroke: new ol.style.Stroke({color: '#693'}),
-          fill: new ol.style.Fill({color: '#bada55'})
+          stroke: new ol.style.Stroke({color: '#FEDD43'}),
+          fill: new ol.style.Fill({color: '#FDCC32'})
         })
       ]
     })

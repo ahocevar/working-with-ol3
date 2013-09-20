@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.min.css">
-    <link rel="stylesheet" href="theme/ol3.css" id="theme">
+    <link rel="stylesheet" href="theme/show.css" id="theme">
 
     <!-- For syntax highlighting -->
     <link rel="stylesheet" href="bower_components/reveal.js/lib/css/zenburn.css">
@@ -37,7 +37,13 @@
         margin-bottom: -4em;
         width: 30%;
       }
-
+      .reveal section img.inline-icon {
+        margin: 0 0 -10px 0;
+        vertical-align: text-bottom;
+      }
+      .reveal a.squinty {
+        font-size: 80%;
+      }
     </style>
   </head>
   <body>
@@ -61,6 +67,14 @@
         </section>
         <section>
           <img src="img/ol-logo.png">
+        </section>
+        <section data-background="img/origin.jpeg">
+        </section>
+        <section>
+          <img src="img/not.png">
+        </section>
+        <section>
+          <h1 class="beefy">Straight to the demos!</h1>
         </section>
         <section>
           <h2>goal: put a map on a page</h2>
@@ -198,6 +212,9 @@ var style = new ol.style.Style({
     })
   ]});
           </code></pre>
+          <a href="./examples/vector-style.html">
+            vector style example
+          </a>
         </section>
         <section>
           <h2>goal: let user interact with the data</h2>
@@ -237,16 +254,36 @@ map.on('click', function(evt) {
         </section>
         <section>
           <pre><code class="javascript" data-trim>
-/**
+/** 
  * WARNING: VERY UNSTABLE API TERRAIN BELOW
  */
+var select = new ol.interaction.Select({
+  layerFilter: function(layer) {
+    return layer === vector;
+  }
+});
+
+var modify = new ol.interaction.Modify();
           </code></pre>
-        </section>
-        <section>
-          <h2>goal: integrate</h2>
+          <a href="./examples/modify-features.html">
+            editing example
+          </a>
         </section>
         <section>
           <h2>goal: get involved</h2>
+          <br>
+          <h3>
+            <img class="inline-icon" src="img/icon-gh.png">
+            Become a contributor
+          </h3>
+          <a class="squinty" href="https://github.com/openlayers/ol3">https://github.com/openlayers/ol3</a>
+          <br>
+          <br>
+          <h3>
+            <img class="inline-icon" src="img/icon-mail.png">
+            Join the discussion
+          </h3>
+          <a class="squinty" href="https://groups.google.com/d/forum/ol3-dev">https://groups.google.com/d/forum/ol3-dev</a>
         </section>
         <section data-background="#FDCC32">
           <h1>Thanks!</h1>
