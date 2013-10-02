@@ -68,98 +68,8 @@
         <section>
           <img src="img/ol-logo.png">
         </section>
-        <section data-background="img/origin.jpeg">
-        </section>
         <section>
-          <img src="img/not.png">
-        </section>
-        <section>
-          <h1 class="beefy">Straight to the demos!</h1>
-        </section>
-        <section>
-          <h2>goal: put a map on a page</h2>
-        </section>
-        <section>
-          <h2><code>ol.Map</code> / <code>ol.View</code></h2>
-          <pre><code class="javascript" data-trim>
-var view = new ol.View2D({
-  center: [0, 0],
-  zoom: 0
-});
-var map = new ol.Map({
-  target: 'map',
-  layers: [layer],
-  view: view
-});
-          </code></pre>
-          <a href="./examples/hello-world.html">
-            hello world example
-          </a>
-        </section>
-        <section>
-          <h2>goal: use a different data source</h2>
-        </section>
-        <section>
-          <h2><code>ol.layer</code> / <code>ol.source</code></h2>
-          <pre><code class="javascript" data-trim>
-var osm = new ol.layer.Tile({
-  source: new ol.source.OSM()
-});
-          </code></pre>
-          <pre class="fragment fade-in"><code class="javascript" data-trim>
-var bing = new ol.layer.Tile({
-  source: new ol.source.BingMaps({
-    // your key here
-    key: 'AlQLZ0-5yk301_ESrmN...',
-    style: 'AerialWithLabels'
-  })
-}));
-          </code></pre>
-          <a href="./examples/tiles-galore.html">
-            tiles galore example
-          </a>
-          <!--
-            Notes:
-              - arbitrary resolutions
-              - interim tiles (maps w/o edges)
-              - tile cache (LRU, each source)
-              - prioritized tile queue (in frame, close to focus, at resolution)
-          -->
-        </section>
-        <section>
-          <h2>goal: give the user control</h2>
-        </section>
-        <section>
-          <h2><code>ol.interaction</code></h2>
-          <ul class="plain">
-            <li><code>ol.interaction.Drag</code></li>
-            <li><code>ol.interaction.DragRotate</code></li>
-            <li><code>ol.interaction.KeyboardPan</code></li>
-            <li><code>ol.interaction.TouchZoom</code></li>
-            <li><code>// etc.</code></li>
-          </ul>
-        </section>
-        <section>
-          <h2><code>ol.control</code></h2>
-          <ul class="plain">
-            <li><code>ol.control.Zoom</code></li>
-            <li><code>ol.control.ScaleLine</code></li>
-            <li><code>ol.control.MousePosition</code></li>
-            <li><code>ol.control.Attribution</code></li>
-            <li><code>// etc.</code></li>
-          </ul>
-          <br><br>
-          <a href="./examples/interaction-control.html">
-            interaction/control example
-          </a>
-          <!--
-            Notes:
-              - configurable defaults
-              - easily styled
-              - demonstrate full-screen
-              - attributions and logo from source
-              - range slider with 2-way binding
-          -->
+          <img src="img/Facebook_like_thumb.png">
         </section>
         <section>
           <h2>goal: work with vector data</h2>
@@ -203,7 +113,7 @@ var style = new ol.style.Style({
 var style = new ol.style.Style({
   rules: [
     new ol.style.Rule({
-      filter: 'type = "highway"',
+      filter: 'type == "highway"',
       symbolizers: [
         new ol.style.Stroke({
           width: 3
@@ -215,33 +125,6 @@ var style = new ol.style.Style({
           <a href="./examples/vector-style.html">
             vector style example
           </a>
-        </section>
-        <section>
-          <h2>goal: let user interact with the data</h2>
-        </section>
-        <section>
-          <h2><code>ol.Overlay</code></h2>
-          <pre><code class="javascript" data-trim>
-var el = document.getElementById('popup');
-var popup = new ol.Overlay({
-  element: el
-});
-map.addOverlay(popup);
-
-map.on('click', function(evt) {
-  popup.setPosition(evt.getCoordinate());
-  el.className = 'open';
-  el.innerHTML = 'Hello Mappers!'
-});
-          </code></pre>
-          <a href="./examples/overlays.html">
-            overlay example
-          </a>
-          <!--
-            Notes:
-             - registering event listeners
-             - popup.bindTo('position', map.getView(), 'center')
-          -->
         </section>
         <section>
           <h2>goal: let user interact with <em>lots</em> data</h2>
